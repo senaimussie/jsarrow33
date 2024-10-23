@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrow Functions with Input</title>
+</head>
+<body>
+    <h1>javascript arrow </h1>
+    <input type="number" id="num1">
+    
+    
+    <input type="number" id="num2">
+    
+    <button onclick="s()">+</button>
+    <p> <span id="sresult"></span></p>
+
+   
+    <input type="number" id="num3">
+    <input type="number" id="num4">
+    
+    <button onclick="m()">X</button>
+    <p><span id="mresult"></span></p>
+
+
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name">
+    
+    <button onclick="greetUser()">Greet</button>
+    <p> <span id="gresult"></span></p>
+
+    <script>
+       
+        let s = () => {
+            let a = parseInt(document.getElementById("num1").value);
+            let b = parseInt(document.getElementById("num2").value);
+            let sum = (a, b) => a + b;
+            let result = sum(a, b);
+            document.getElementById("sresult").textContent = result;
+        }
+
+
+      
+      
+        let m = () => {
+            let e = parseInt(document.getElementById("num3").value);
+            let f = parseInt(document.getElementById("num4").value);
+            let multiply = (e, f) => e * f;
+            let result = multiply(e, f);
+            document.getElementById("mresult").textContent = result;
+        }
+
+        
+        let greetUser = () => {
+            let name = document.getElementById("name").value;
+            let greet = (name) => "Hello " + name;
+            let result = greet(name);
+            document.getElementById("gresult").textContent = result;
+        }
+    </script>
+</body>
+</html>
